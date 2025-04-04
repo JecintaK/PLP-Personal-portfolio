@@ -1,0 +1,309 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background for body */
+body {
+    background: url('images/your-image.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: #000000;
+    background: rgba(241, 123, 123, 0.7);
+    line-height: 1.6; /* Add line spacing for better readability */
+    padding: 20px; /* Add padding around the body */
+}
+
+/* Landing Section */
+.landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px; /* Increase padding for more space */
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(241, 123, 123, 0.8), rgba(255, 255, 255, 0.1));
+    padding: 15px 0; /* Reduce padding for a sleeker look */
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    transition: background 0.3s ease; /* Smooth transition for background changes */
+}
+
+nav:hover {
+    background: linear-gradient(90deg, rgba(255, 123, 123, 0.9), rgba(255, 255, 255, 0.3)); /* Change background on hover */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center align navigation items */
+    gap: 40px; /* Add more spacing between navigation items */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Increase font size for better readability */
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add smooth hover effects */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease; /* Add underline animation */
+}
+
+nav ul li a:hover {
+    color: #f17b7b; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the text */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+#typing {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(60, 39, 39);
+    border-right: 2px solid white;
+    animation: typing 3s steps(20, end) forwards, blink 0.5s infinite;
+    margin-top: 80px;
+    width: 100%;
+}
+
+/* Portfolio Section */
+.portfolio {
+    text-align: center;
+    padding: 50px 10%;
+    background: rgba(241, 123, 123, 0.7);
+    padding-bottom: 100px;
+}
+
+ul {
+    display: flex; /* Change to flexbox layout */
+    justify-content: center; /* Center align the items horizontally */
+    gap: 30px; /* Add spacing between items */
+    padding: 30px;
+    list-style: none; /* Remove default list styling */
+}
+
+li {
+    display: flex;
+    flex-direction: column; /* Stack content vertically inside each item */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1); /* Add a subtle background */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+    width: 200px; /* Set a fixed width for consistency */
+}
+
+li:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Add a glow effect */
+}
+
+li img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slightly round image corners */
+}
+
+li p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+/* Section Boxes */
+.sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Fix typo and center align */
+    width: 100%;
+    gap: 30px; /* Increase spacing between sections */
+    padding: 20px; /* Add padding around sections */
+}
+
+/* Individual Section Styling */
+.section-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px; /* Increase padding for more space */
+    border-radius: 15px; /* Increase border radius for a softer look */
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+/* Hover Effect - Grow the Box */
+.section-box:hover {
+    transform: scale(1.1); /* Slightly enlarge */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6); /* Enhance glow effect */
+}
+
+
+
+
+
+.contact {
+    text-align: center;
+    padding: 50px 10%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact p {
+    margin-bottom: 20px;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: rgb(205, 85, 131);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(203, 83, 83);
+}
+
+
+
+
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(246, 89, 87, 0.8);
+    color: rgb(40, 3, 3);
+    margin-top: 30px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+
+
+
+.download-btn {
+    background-color: rgb(205, 85, 131);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: rgb(203, 83, 83);
+    transform: scale(1.1);
+}
+

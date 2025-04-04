@@ -1,0 +1,67 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        /* Background Image with Parallax Effect */
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: url('../images/coding.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+
+        /* Glassmorphism Effect */
+        .container {
+            background: rgba(255, 255, 255, 0.1); /* Light transparent effect */
+            backdrop-filter: blur(10px); /* Blur effect */
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Cool Animated Button */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1.3rem;
+            color: white;
+            background: linear-gradient(45deg, purple, pink);
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
+    
